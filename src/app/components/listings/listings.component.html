@@ -1,0 +1,5 @@
+<ul class="list-group">
+  <li class="list-group-item" *ngFor="let l of listings">
+    <a [routerLink]="['/card/'+l.$key]">{{l.title}}</a>
+  </li>
+</ul>

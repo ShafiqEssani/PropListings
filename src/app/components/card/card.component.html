@@ -1,0 +1,28 @@
+<div *ngIf="card">
+  <a [routerLink]="['/listings']"> Go Back </a>
+  <br>
+  <h2 class="page-header">
+    {{ card.title }}
+    <small>
+    {{ card.city }}
+  </small>
+  </h2>
+
+  <div class="row">
+    <div class="col-md-4">
+      <!-- IMAGE HERE -->
+      <img src="{{imageUrl}}" style="width:100%" class="thumbnail">
+    </div>
+
+    <div class="col-md-8">
+      <ul class="list-group">
+        <li class="list-group-item">Owner: {{card.owner}}</li>
+        <li class="list-group-item">Bedrooms: {{card.bedrooms}}</li>
+        <li class="list-group-item">Type: {{card.type}}</li>
+        <li class="list-group-item">Price: {{card.price}}</li>
+      </ul>
+    </div>
+    <a class="btn btn-default" [routerLink]="['/edit-card/'+card.$key]">Edit</a>
+    <a (click)="onDeleteClick()" class="btn btn-danger">Delete</a>
+  </div>
+</div>
