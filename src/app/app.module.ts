@@ -8,6 +8,7 @@ import { environment } from '../environments/environment';
 import { FirebaseService } from './services/firebase.service';
 import { AngularFireDatabaseModule, AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
 import { FlashMessagesModule } from 'angular2-flash-messages';
+import * as firebase from 'firebase/app';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';

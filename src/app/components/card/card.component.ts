@@ -23,6 +23,8 @@ export class CardComponent implements OnInit {
   ngOnInit() {
     //Get the ID
     this.id = this.route.snapshot.params['id'];
+    console.log(this.route.snapshot.params);
+    
 
     this.fbs.getCardDetails(this.id)
       .subscribe(xyz => {
